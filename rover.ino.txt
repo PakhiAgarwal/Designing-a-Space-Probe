@@ -1,0 +1,90 @@
+
+  float temp;//temp sensor
+int tempPin = 0;//connect data pin of lm35 to A
+int sensorValue1=0;
+int sensorValue2=0;
+const int xpin = A2;  //accelerometer
+const int ypin = A3;  //connect x y z pins of accelerometer to A4 A3 A2              
+const int zpin = A4; 
+int mostureSensor = 6;//moisture sensor connect data pin to A5
+ void setup()
+ {
+ Serial.begin(9600);
+ pinMode(2,INPUT);
+ }
+
+
+ void loop()
+ {temp = analogRead(tempPin);//temp
+  temp = temp * 0.48828125;
+  Serial.print("TEMPRATURE = ");
+  Serial.print(temp);
+  Serial.print("*C");
+  Serial.println();
+  delay(100);
+  Serial.println("IR sensor");
+  Serial.println("");
+ if(digitalRead(2)==HIGH)
+ {
+   Serial.println("Obstruction found");
+   delay(100);
+ }
+ if(digitalRead(2)==LOW)
+ {
+   Serial.println("No Obstruction found");
+   delay(100);
+ }
+ Serial.println("");
+  sensorValue1 = analogRead(6); //gas sensor
+  Serial.println("GAS SENSOR LPG");
+  Serial.print(sensorValue1);
+  delay(100);
+  Serial.println("");
+  sensorValue2 = analogRead(7); //gas sensor
+  Serial.println("GAS SENSOR SMOKE");
+  Serial.print(sensorValue2);
+  delay(100);
+  Serial.println("");
+  Serial.println("Accelerometer");
+   Serial.print(analogRead(xpin));
+  // print a tab between values:
+  Serial.print("\t");
+  Serial.print(analogRead(ypin));
+  // print a tab between values:
+  Serial.print("\t");
+  Serial.print(analogRead(zpin));
+  Serial.println();
+  // delay before next reading:
+  delay(100);
+  Serial.println("");
+  int moist = analogRead(mostureSensor);
+  
+   Serial.println("Moisture sensor");
+   Serial.println(moist);
+   delay(2000);
+   
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+  
+
+
+
+
+
+
+
+
+        
