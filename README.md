@@ -6,3 +6,7 @@
 <p align="center">This project is hardware and software based working model which uses different sensors, cameras and other equipments which would be required by a space probe on space exploration of different planet. Some changes are made on the basis of study of different models sent, which if incorporated may make the probes more durable, economical and beneficial for long duration of projects. </p>
 
 ![Model Demo](https://github.com/PakhiAgarwal/Designing-a-Space-Probe/blob/master/robot.JPG)
+
+![Board](https://github.com/PakhiAgarwal/Designing-a-Space-Probe/blob/master/Board.PNG)
+
+![Sensor](https://github.com/PakhiAgarwal/Designing-a-Space-Probe/blob/master/Sense.JPG)
